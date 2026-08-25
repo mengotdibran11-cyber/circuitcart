@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart - CircuitCart</title>
+
+  <!-- Google Font: Poppins (same as the shop page) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/cart-style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="cart-heading" id="cartHeading">My Cart</h1>
+
+    <div class="cart-layout">
+      <!-- Cart item cards get rendered here by cart-script.js, based on
+           whatever is saved in localStorage (added from index.html) -->
+      <div class="cart-items" id="cartItems"></div>
+
+      <!-- Order summary also gets filled in by cart-script.js so it always
+           matches the items on the left -->
+      <aside class="order-summary" id="orderSummary"></aside>
+    </div>
+  </div>
+
+  <script src="js/cart-storage.js"></script>
+  <script src="js/cart-script.js"></script>
+</body>
+</html>

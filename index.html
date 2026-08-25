@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CircuitCart - Upgrade Your Tech</title>
+
+  <!-- Google Font: Poppins (closest match to the design's rounded geometric sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/enhancements.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header__inner">
+
+      <!-- Logo: bolt icon (svg) + wordmark -->
+      <a href="#" class="logo">
+        <svg class="logo__bolt" width="24" height="34" viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 0L0 20H10L8 34L24 12H13L14 0Z" fill="url(#bolt-gradient)"/>
+          <defs>
+            <linearGradient id="bolt-gradient" x1="0" y1="34" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF7811"/>
+              <stop offset="1" stop-color="#FFCD19"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo__text">CircuitCart</span>
+      </a>
+
+      <!-- Cart icon with live item-count badge. Navigates to cart.html
+           as a real sub-page, in the same tab — same pattern as Amazon's
+           own checkout flow (a distinct page/URL, not a new tab or an
+           in-page overlay). -->
+      <a href="cart.html" class="cart-link" id="cartLink">
+        <span class="cart-icon-wrap">
+          <svg class="cart-icon" width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H4.5L6.9 15.4C7.08 16.5 8.03 17.3 9.15 17.3H20.1C21.2 17.3 22.15 16.52 22.35 15.44L24.5 5.3H6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="21.5" r="1.8" fill="white"/>
+            <circle cx="19" cy="21.5" r="1.8" fill="white"/>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </span>
+        <span>Cart</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1>Upgrade Your Tech. Upgrade Your Life.</h1>
+        <p>Discover premium laptops, desktops, smartphones, gaming accessories, and electronics at unbeatable prices.</p>
+        <a href="#featured-products" class="btn btn--dark">Shop Now</a>
+      </div>
+      <div class="hero__image">
+        <img src="assets/hero-collage.png" alt="Collage of a laptop, smartphone, camera, gaming handheld, VR headset, drone, smartwatches, headphones, earbuds and other electronics sold on CircuitCart">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BROWSE BY CATEGORY ================= -->
+  <section class="categories">
+    <div class="container">
+      <h2>Browse by category</h2>
+    </div>
+    <!-- Full-bleed scroll track so the last card can peek off-screen, matching the reference design -->
+    <div class="categories__scroll">
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-bluetooth-speaker.png" alt="Speakers category"></span>
+        <span class="category-card__label">Speakers</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-usb-charger.png" alt="Chargers category"></span>
+        <span class="category-card__label">Chargers</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-flash-drives.png" alt="Flash Drives category"></span>
+        <span class="category-card__label">Flash Drives</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-ring-light.png" alt="Ring Lights category"></span>
+        <span class="category-card__label">Ring Lights</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-router.png" alt="Routers category"></span>
+        <span class="category-card__label">Routers</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-table-fan.png" alt="Table Fans category"></span>
+        <span class="category-card__label">Table Fans</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-neckband-earphones.png" alt="Neckband Earphones category"></span>
+        <span class="category-card__label">Neckband Earphones</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-phone-holder.png" alt="Phone Accessories category"></span>
+        <span class="category-card__label">Phone Accessories</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-redmi-note-15.png" alt="Phones category"></span>
+        <span class="category-card__label">Phones</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-amazfit-bip-watch.png" alt="Smart Watches category"></span>
+        <span class="category-card__label">Smart Watches</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-ps5-console.png" alt="Gaming category"></span>
+        <span class="category-card__label">Gaming</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-iniu-power-bank.png" alt="Power Banks category"></span>
+        <span class="category-card__label">Power Banks</span>
+      </a>
+      <a href="#featured-products" class="category-card">
+        <span class="category-card__thumb"><img src="assets/product-iphone14-case-purple.png" alt="Phone Cases category"></span>
+        <span class="category-card__label">Phone Cases</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PRODUCTS ================= -->
+  <section class="featured-products" id="featured-products">
+    <div class="container">
+      <h2>Featured Products</h2>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Each product card carries its data in data-* attributes so script.js can read it -->
+
+        <article class="product-card" data-name="Portable T&amp;G Bluetooth Speaker" data-price="4000">
+          <img src="assets/product-bluetooth-speaker.png" alt="Portable T&amp;G Bluetooth Speaker" class="product-card__img">
+          <h3>Portable T&amp;G Bluetooth Speaker</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">230</span>
+          </div>
+          <p class="price">4 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="USB-C 65W Fast Charger" data-price="1500">
+          <img src="assets/product-usb-charger.png" alt="USB-C 65W Fast Charger" class="product-card__img">
+          <h3>USB-C 65W Fast Charger</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">87</span>
+          </div>
+          <p class="price">1 500 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="USB Flash Drives" data-price="2000">
+          <img src="assets/product-flash-drives.png" alt="USB Flash Drives" class="product-card__img">
+          <h3>USB Flash Drives</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">137</span>
+          </div>
+          <p class="price">2 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Phone Holder" data-price="2500">
+          <img src="assets/product-phone-holder.png" alt="Phone Holder" class="product-card__img">
+          <h3>Phone Holder</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">96</span>
+          </div>
+          <p class="price">2 500 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Table Fan" data-price="15000">
+          <img src="assets/product-table-fan.png" alt="Table Fan" class="product-card__img">
+          <h3>Table Fan</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">134</span>
+          </div>
+          <p class="price">15 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Ring LED Light" data-price="10000">
+          <img src="assets/product-ring-light.png" alt="Ring LED Light" class="product-card__img">
+          <h3>Ring LED Light</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">167</span>
+          </div>
+          <p class="price">10 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Oraimo Necklace Lite" data-price="2000">
+          <img src="assets/product-neckband-earphones.png" alt="Oraimo Necklace Lite" class="product-card__img">
+          <h3>Oraimo Necklace Lite</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">87</span>
+          </div>
+          <p class="price">2 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Router" data-price="25000">
+          <img src="assets/product-router.png" alt="Router" class="product-card__img">
+          <h3>Router</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">230</span>
+          </div>
+          <p class="price">25 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+      
+        <article class="product-card" data-name="Amazfit Bip U Pro Smart Watch" data-price="24000">
+          <img src="assets/product-amazfit-bip-watch.png" alt="Amazfit Bip U Pro Smart Watch" class="product-card__img">
+          <h3>Amazfit Bip U Pro Smart Watch</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">179</span>
+          </div>
+          <p class="price">24 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Eurans 41mm Smart Watch" data-price="15000">
+          <img src="assets/product-eurans-smart-watch.png" alt="Eurans 41mm Smart Watch" class="product-card__img">
+          <h3>Eurans 41mm Smart Watch</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">367</span>
+          </div>
+          <p class="price">15 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Black Round Smart Watch" data-price="12000">
+          <img src="assets/product-round-smart-watch.png" alt="Black Round Smart Watch" class="product-card__img">
+          <h3>Black Round Smart Watch</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">381</span>
+          </div>
+          <p class="price">12 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="JBL True Wireless Earbuds" data-price="48000">
+          <img src="assets/product-jbl-earbuds.png" alt="JBL True Wireless Earbuds" class="product-card__img">
+          <h3>JBL True Wireless Earbuds</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">126</span>
+          </div>
+          <p class="price">48 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Bluetooth Speaker with Light" data-price="15000">
+          <img src="assets/product-bt-speaker-light.png" alt="Bluetooth Speaker with Light" class="product-card__img">
+          <h3>Bluetooth Speaker with Light</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">303</span>
+          </div>
+          <p class="price">15 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Wireless Lavalier Microphone (2-Pack)" data-price="21000">
+          <img src="assets/product-lavalier-mic.png" alt="Wireless Lavalier Microphone (2-Pack)" class="product-card__img">
+          <h3>Wireless Lavalier Microphone (2-Pack)</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">259</span>
+          </div>
+          <p class="price">21 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="ORICO 7-Port USB 3.0 Hub" data-price="12000">
+          <img src="assets/product-usb-hub.png" alt="ORICO 7-Port USB 3.0 Hub" class="product-card__img">
+          <h3>ORICO 7-Port USB 3.0 Hub</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">173</span>
+          </div>
+          <p class="price">12 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="DualSense Edge Wireless Controller" data-price="120000">
+          <img src="assets/product-dualsense-edge.png" alt="DualSense Edge Wireless Controller" class="product-card__img">
+          <h3>DualSense Edge Wireless Controller</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">362</span>
+          </div>
+          <p class="price">120 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="HAVIT Gaming Headset" data-price="18000">
+          <img src="assets/product-havit-headset.png" alt="HAVIT Gaming Headset" class="product-card__img">
+          <h3>HAVIT Gaming Headset</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">146</span>
+          </div>
+          <p class="price">18 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="realme Buds T110" data-price="12000">
+          <img src="assets/product-realme-buds.png" alt="realme Buds T110" class="product-card__img">
+          <h3>realme Buds T110</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">133</span>
+          </div>
+          <p class="price">12 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="RGB Gaming Keyboard &amp; Mouse Combo" data-price="21000">
+          <img src="assets/product-rgb-keyboard-mouse.png" alt="RGB Gaming Keyboard &amp; Mouse Combo" class="product-card__img">
+          <h3>RGB Gaming Keyboard &amp; Mouse Combo</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">201</span>
+          </div>
+          <p class="price">21 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="SADES Whisper II Keyboard &amp; Mouse Combo" data-price="24000">
+          <img src="assets/product-sades-keyboard-mouse.png" alt="SADES Whisper II Keyboard &amp; Mouse Combo" class="product-card__img">
+          <h3>SADES Whisper II Keyboard &amp; Mouse Combo</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">103</span>
+          </div>
+          <p class="price">24 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Dual USB Wall Charger (3-Pack)" data-price="6000">
+          <img src="assets/product-usb-wall-charger-3pack.png" alt="Dual USB Wall Charger (3-Pack)" class="product-card__img">
+          <h3>Dual USB Wall Charger (3-Pack)</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">291</span>
+          </div>
+          <p class="price">6 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="iPhone 14 Clear Case" data-price="6000">
+          <img src="assets/product-iphone14-case-purple.png" alt="iPhone 14 Clear Case" class="product-card__img">
+          <h3>iPhone 14 Clear Case</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">90</span>
+          </div>
+          <p class="price">6 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="iPhone Clear Case with Black Trim" data-price="7000">
+          <img src="assets/product-iphone-case-black-trim.png" alt="iPhone Clear Case with Black Trim" class="product-card__img">
+          <h3>iPhone Clear Case with Black Trim</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">107</span>
+          </div>
+          <p class="price">7 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Samsung Galaxy S22 Ultra" data-price="480000">
+          <img src="assets/product-galaxy-s22-ultra.png" alt="Samsung Galaxy S22 Ultra" class="product-card__img">
+          <h3>Samsung Galaxy S22 Ultra</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">377</span>
+          </div>
+          <p class="price">480 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="INIU Portable Power Bank" data-price="15000">
+          <img src="assets/product-iniu-power-bank.png" alt="INIU Portable Power Bank" class="product-card__img">
+          <h3>INIU Portable Power Bank</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">498</span>
+          </div>
+          <p class="price">15 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Samsung Galaxy Note20 Ultra 5G" data-price="360000">
+          <img src="assets/product-note20-ultra.png" alt="Samsung Galaxy Note20 Ultra 5G" class="product-card__img">
+          <h3>Samsung Galaxy Note20 Ultra 5G</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">161</span>
+          </div>
+          <p class="price">360 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Redmi Note 15 5G" data-price="180000">
+          <img src="assets/product-redmi-note-15.png" alt="Redmi Note 15 5G" class="product-card__img">
+          <h3>Redmi Note 15 5G</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">279</span>
+          </div>
+          <p class="price">180 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Z-EDGE UG32P 32&quot; 240Hz Curved Gaming Monitor" data-price="210000">
+          <img src="assets/product-zedge-monitor.png" alt="Z-EDGE UG32P 32&quot; 240Hz Curved Gaming Monitor" class="product-card__img">
+          <h3>Z-EDGE UG32P 32&quot; 240Hz Curved Gaming Monitor</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">59</span>
+          </div>
+          <p class="price">210 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="ASUS ROG Rapture GT-AXE16000 Gaming Router" data-price="350000">
+          <img src="assets/product-rog-router.png" alt="ASUS ROG Rapture GT-AXE16000 Gaming Router" class="product-card__img">
+          <h3>ASUS ROG Rapture GT-AXE16000 Gaming Router</h3>
+          <div class="rating">
+            <span class="stars" data-rating="4" aria-hidden="true"></span>
+            <span class="rating__count">451</span>
+          </div>
+          <p class="price">350 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-name="Sony PlayStation 5 Console" data-price="420000">
+          <img src="assets/product-ps5-console.png" alt="Sony PlayStation 5 Console" class="product-card__img">
+          <h3>Sony PlayStation 5 Console</h3>
+          <div class="rating">
+            <span class="stars" data-rating="5" aria-hidden="true"></span>
+            <span class="rating__count">472</span>
+          </div>
+          <p class="price">420 000 FCFA</p>
+          <select class="qty-select" aria-label="Quantity">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+          <button class="btn btn--add-to-cart">Add to Cart</button>
+        </article>
+</div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="#" class="logo">
+          <svg class="logo__bolt" width="20" height="28" viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 0L0 20H10L8 34L24 12H13L14 0Z" fill="url(#bolt-gradient-footer)"/>
+            <defs>
+              <linearGradient id="bolt-gradient-footer" x1="0" y1="34" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF7811"/>
+                <stop offset="1" stop-color="#FFCD19"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="logo__text">CircuitCart</span>
+        </a>
+        <!-- Not links: these are placeholder icons with nothing to link to
+             yet, so they're plain inert spans rather than clickable anchors. -->
+        <div class="footer__socials">
+          <span class="footer__social-icon" aria-hidden="true"><img src="assets/icon-google.png" alt=""></span>
+          <span class="footer__social-icon" aria-hidden="true"><img src="assets/icon-apple.png" alt=""></span>
+          <span class="footer__social-icon" aria-hidden="true"><img src="assets/icon-facebook.png" alt=""></span>
+        </div>
+      </div>
+
+      <!-- Not links: placeholder nav items with no pages behind them yet. -->
+      <nav class="footer__links">
+        <ul>
+          <li><span>About Us</span></li>
+          <li><span>Contact</span></li>
+          <li><span>Blog</span></li>
+        </ul>
+        <ul>
+          <li><span>Careers</span></li>
+          <li><span>Support</span></li>
+          <li><span>Privacy Policy</span></li>
+        </ul>
+      </nav>
+
+      <a href="#featured-products" class="btn btn--book-now">Shop Now</a>
+
+    </div>
+  </footer>
+
+  <!-- Toast notification shown after adding an item to the cart.
+       Content is filled in by script.js; empty by default. -->
+  <!-- Toast notification shown after adding an item to the cart.
+       Message text is filled in by script.js; the two buttons are
+       wired up once on page load. -->
+  <div class="toast" id="cartToast" role="status" aria-live="polite">
+    <span class="toast__message" id="cartToastMessage"></span>
+    <div class="toast__actions">
+      <a href="cart.html" class="toast__btn toast__btn--view">View Cart</a>
+      <button type="button" class="toast__btn toast__btn--dismiss" id="cartToastDismiss">Dismiss</button>
+    </div>
+  </div>
+
+  <script src="js/cart-storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
