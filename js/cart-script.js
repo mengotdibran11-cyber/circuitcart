@@ -35,9 +35,6 @@ function renderCart() {
   itemsContainer.innerHTML = cart
     .map((item) => {
       const lineTotal = item.price * item.qty;
-      const qtyOptions = [1, 2, 3, 4, 5]
-        .map((n) => `<option value="${n}" ${n === item.qty ? "selected" : ""}>${n}</option>`)
-        .join("");
 
       return `
         <article class="cart-item" data-id="${item.id}">
@@ -50,7 +47,7 @@ function renderCart() {
             <p class="cart-item__line-total">${formatFCFA(lineTotal)}</p>
             <div class="cart-item__qty-row">
               <label for="qty-${item.id}">Quantity:</label>
-              <select class="qty-select" id="qty-${item.id}">${qtyOptions}</select>
+              <input type="number" class="qty-select" id="qty-${item.id}" min="1" max="99" step="1" value="${item.qty}">
               <button class="link-btn link-btn--update" data-action="update" data-id="${item.id}">Update</button>
               <button class="link-btn link-btn--delete" data-action="delete" data-id="${item.id}">Delete</button>
             </div>
@@ -116,8 +113,8 @@ function setUpCartActions() {
     }
 
     if (action === "update") {
-      const select = document.getElementById(`qty-${id}`);
-      item.qty = Number(select.value);
+      const input = document.getElementById(`qty-${id}`);
+      item.qty = clampQty(input.value);
       saveCart(cart);
       renderCart();
     }

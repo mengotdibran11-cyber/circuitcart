@@ -21,6 +21,15 @@ function formatFCFA(amount) {
   return `${Math.round(amount).toLocaleString("fr-FR")} FCFA`;
 }
 
+// Keep quantity inputs sane: whole numbers between 1 and 99. Used on both
+// the shop page (before adding to cart) and the cart page (on update),
+// so someone can't submit "0", a negative number, blank, or "3.5".
+function clampQty(value, { min = 1, max = 99 } = {}) {
+  const n = Math.floor(Number(value));
+  if (!Number.isFinite(n)) return min;
+  return Math.min(Math.max(n, min), max);
+}
+
 // Turn a product name into a safe, stable id, e.g. "Table Fan" -> "table-fan"
 function slugify(name) {
   return name.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-");

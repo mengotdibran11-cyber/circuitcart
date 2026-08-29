@@ -75,7 +75,8 @@ function setUpAddToCartButtons() {
     const price = Number(card.dataset.price);
 
     button.addEventListener("click", () => {
-      const quantity = Number(qtySelect.value);
+      const quantity = clampQty(qtySelect.value);
+      qtySelect.value = quantity; // reflect any correction back in the field
 
       addItemToCart({
         id: slugify(name),
@@ -87,6 +88,14 @@ function setUpAddToCartButtons() {
 
       updateCartBadge();
       showCartToast(quantity);
+    });
+  });
+
+  // Fix up quantity fields as soon as someone leaves them: no blanks,
+  // zeros, negatives, or decimals sitting in the input.
+  document.querySelectorAll(".qty-select").forEach((input) => {
+    input.addEventListener("change", () => {
+      input.value = clampQty(input.value);
     });
   });
 }

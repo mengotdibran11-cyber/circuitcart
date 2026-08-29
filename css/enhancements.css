@@ -149,3 +149,19 @@
     text-align: center;
   }
 }
+
+/* ---------- Quantity number inputs (replaces the 1-5 dropdown) ---------- */
+input.qty-select[type="number"] {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: #fff;
+  width: 80px;
+}
+
+input.qty-select[type="number"]::-webkit-inner-spin-button,
+input.qty-select[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
